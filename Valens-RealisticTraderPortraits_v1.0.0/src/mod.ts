@@ -39,10 +39,10 @@ class ValensRealisticTraderPortraits implements IPreAkiLoadMod {
     {
         // Reference the mod "res" folder
         const imageFilepath = `./${preAkiModLoader.getModPath(this.mod)}src/traders`;
-        const db = this.databaseServer.getTables();
+        const db = this.databaseServer.getTables().traders;
 
         // Register a route to point to the profile picture
-        imageRouter.addRoute(db.traders["54cb50c76803fa8b248b4571"].base.avatar.replace(".jpg", ""), `${imageFilepath}/prapor.png`);
+        imageRouter.addRoute(db["54cb50c76803fa8b248b4571"].base.avatar.replace(".jpg", ""), `${imageFilepath}/prapor.png`);
     }
 }
 
